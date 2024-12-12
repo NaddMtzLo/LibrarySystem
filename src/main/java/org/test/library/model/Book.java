@@ -1,11 +1,38 @@
 package org.test.library.model;
 
+/**
+ * La clase Book representa un libro en el sistema de biblioteca.
+ * Se implementó el principio de encapsulación para proteger y controlar el acceso a los datos por lo que los parámetros son privados.
+ */
 public class Book {
+    /**
+     * El Número Estándar Internacional del Libro (ISBN).
+     */
     private String isbn;
+
+    /**
+     * Título del libro.
+     */
     private String title;
+
+    /**
+     * Autor del libro.
+     */
     private String author;
+
+    /**
+     * Disponibilidad del libro.
+     */
     private boolean available;
 
+    /**
+     * Constructor que permite crear nuevos libros en el sistema con las propiedades indicadas.
+     *
+     * @param isbn      ISBN del libro
+     * @param title     título del libro
+     * @param author    autor del libro
+     * @param available disponibilidad del libro
+     */
     public Book(String isbn, String title, String author, boolean available) {
         this.isbn = isbn;
         this.title = title;
@@ -13,6 +40,9 @@ public class Book {
         this.available = true;
     }
 
+    /**
+     * Se implementaron getters y setters para acceder y modificar los atributos de libro.
+     */
     public String getIsbn() {
         return isbn;
     }
@@ -37,10 +67,16 @@ public class Book {
         this.author = author;
     }
 
+    /**
+     * Valida si el libro está disponible
+     */
     public boolean isAvailable() {
         return available;
     }
 
+    /**
+     * Asigna un status la disponibilidad a un libro
+     */
     public void setAvailable(boolean available) {
         this.available = available;
     }
