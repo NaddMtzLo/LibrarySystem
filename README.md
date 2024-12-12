@@ -122,69 +122,10 @@ System.out.println("Libro devuelto correctamente.");
 
 ---
 
-## Diagramas UML
+## Diagrama UML
 
-Los diagramas UML a continuación representan las relaciones entre las clases principales del sistema:
+El diagrama UML a continuación representan las relaciones entre las clases principales del sistema:
 
-```plantuml
-@startuml
-class Book {
-    - String isbn
-    - String title
-    - String author
-    - boolean available
-    + getIsbn()
-    + getTitle()
-    + getAuthor()
-    + isAvailable()
-}
-
-class User {
-    - String id
-    - String name
-    - String email
-    - List<Loan> activeLoans
-    + canBorrowBooks()
-    + getId()
-    + getName()
-    + getEmail()
-    + getActiveLoans()
-}
-
-class Loan {
-    - Book book
-    - User user
-    - LocalDate loanDate
-    - LocalDate dueDate
-    - boolean returned
-    + isOverDue()
-    + getBook()
-    + getUser()
-    + getLoanDate()
-    + getDueDate()
-    + isReturned()
-}
-
-class LibraryService {
-    - List<Book> books
-    - List<User> users
-    - List<Loan> loans
-    + findBooksByTitle()
-    + findBooksByAuthor()
-    + loanBook()
-    + returnBook()
-    + getBooks()
-    + getUsers()
-    + getLoans()
-}
-
-Book --> Loan
-User --> Loan
-LibraryService --> Book
-LibraryService --> User
-LibraryService --> Loan
-```
-
+![image](https://github.com/user-attachments/assets/b862be37-e0c4-4823-ba01-c55db8dca861)
 ---
-
 
